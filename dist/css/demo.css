@@ -15,6 +15,26 @@ pre.highlight,
   overflow: auto;
   border-radius: var(--tblr-border-radius);
 }
+.modal-header{
+	BACKGROUND:#0ca678 !important;
+}
+.modal-header:hover{
+	background:#aa744e  !important;
+}
+.navbar {
+    --tblr-navbar-bg: var(--tblr-bg-surface);
+    --tblr-navbar-border-width: var(--tblr-border-width);
+--tblr-navbar-active-border-color: #0ca678 !important;}
+.nav-link-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-right: .5rem;
+    color: #2fb344 !important;
+}
+th{
+	BACKGROUND:#0ca678 !important;
+	color:white !important;
+}
 pre.highlight,
 .highlight pre {
   scrollbar-color: rgba(var(--tblr-scrollbar-color, var(--tblr-body-color-rgb)), 0.16) transparent;

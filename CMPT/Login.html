@@ -12,6 +12,9 @@
 	 <link href="../dist/css/tabler-payments.min.css?1692870487" rel="stylesheet"/>
 	 <link href="../dist/css/tabler-vendors.min.css?1692870487" rel="stylesheet"/>
 	 <link href="../dist/css/demo.min.css?1692870487" rel="stylesheet"/>
+	 <link href="../dist/css/demo.css" rel="stylesheet"/>
+	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover.css" integrity="sha512-O0OajC2ZbewIBOO1RxRSm/kvJ0hn19ACNJXfBH0HflppYK9QCq9v/wfNdcKNs/Dh8IXFXc1URFame5IJVxLrWA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	
 	 <style>
 		  @import url('https://rsms.me/inter/inter.css');
 
@@ -24,36 +27,39 @@
 		  }
 	 </style>
 </head>
-<body class=" d-flex flex-column">
+<body class=" d-flex flex-column" style="overflow:hidden">
 <script src="../dist/js/demo-theme.min.js?1692870487"></script>
-<div class="page page-center">
-	 <div class="container container-normal py-4">
-		  <div class="row align-items-center g-4">
-				<div class="col-lg">
+
+	
+		  <div class="row align-items-center ">
+		  <div class="col-lg-4"></div>
+				<div class="col-lg-4">
 					 <div class="container-tight">
 						  <div class="text-center mb-4">
 
 						  </div>
 						  <div class="card card-md">
-								<div class="card-body">
-									 <h2 class="h2 text-center mb-4">TERROIR DU MAROC <a href="." class="navbar-brand navbar-brand-autodark"><img src="../static/logo1.png"
-																																													  height="50" alt=""></a></h2>
+								<div class="card-body" style="border-top: 6px solid #0ca678;
+    border-radius: 4px;
+">
+									 <h2 class="h2 text-center mb-4">TERROIR DU MAROC <a href="." class="navbar-brand navbar-brand-autodark"><img  class="hvr-float" src="../static/logo1.png"
+																																													  height="160px" alt=""></a></h2>
 									 <form action="../CMPT/Dashboard.html" method="get" autocomplete="off" novalidate>
 										  <div class="mb-3">
-												<label class="form-label">Username</label>
+												<label class="form-label">Nom d'utilisateur</label>
 												<input type="email" class="form-control" autocomplete="off">
 										  </div>
 										  <div class="mb-2">
 												<label class="form-label">
 													 Mot de passe
 													 <span class="form-label-description">
-                          <a href="">Mot de passe oublié</a>
+                          <a style="color: #aa744f;">Mot de passe oublié</a>
                         </span>
 												</label>
 												<div class="input-group input-group-flat">
 													 <input type="password" class="form-control" autocomplete="off">
 													 <span class="input-group-text">
-                          <a href="#" class="link-secondary" title="Show password" data-bs-toggle="tooltip"><!-- Download SVG icon from http://tabler-icons.io/i/eye -->
+                          <a  class="link-secondary" title="Show password" data-bs-toggle="tooltip"><!-- Download SVG icon from http://tabler-icons.io/i/eye -->
                             <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
 											viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
 											stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"
@@ -65,20 +71,16 @@
 												</div>
 										  </div>
 										  <div class="form-footer">
-												<button type="submit" class="btn btn-primary w-100">Login</button>
+												<button style="background: #aa744f;" type="submit" class="btn btn-primary w-100">Login</button>
 										  </div>
 									 </form>
 								</div>
 						  </div>
 					 </div>
-				</div>
-				<div class="col-lg d-none d-lg-block">
-					 <img src="../static/login.png" height="300" class="d-block mx-auto"
-							alt="">
-				</div>
-		  </div>
-	 </div>
-</div>
+				</div></div>
+				<div class="col-lg-4"></div>
+		  </div></div>
+	
 <!-- Libs JS -->
 <!-- Tabler Core -->
 <script src="../dist/js/tabler.min.js?1692870487" defer></script>
