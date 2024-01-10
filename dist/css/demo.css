@@ -299,18 +299,18 @@ pre.highlight::-webkit-scrollbar-corner,
   text-align: center;
 }
 
-.s0 { fill: #cecece }
-.s3 { fill: #c3c3c3 }
-.s4 { fill: #e5e5e5 }
-.s5 { fill: #ffffff}
-.s6 { fill: #e9e9e9 }
-.s7 { fill: #e8e8e8 }
-.s8 { fill: #ffffff}
-.s9 { fill: #e7e7e7 }
-.s10 { fill: #d9d8d8 }
-.s11 { fill: #cecece }
-.s12 { fill: #e8e8e8 }
-.s13 { fill: #e5e5e5 }
+.s0 { fill: #2f971a }
+.s3 { fill: #63eb24 }
+.s4 { fill: #2ba81b }
+.s5 { fill: #3ece51}
+.s6 { fill: #16943b }
+.s7 { fill: #4ab63c }
+.s8 { fill: #259609}
+.s9 { fill: #09ac3f }
+.s10 { fill: #3ece51 }
+.s11 { fill: #3ece51 }
+.s12 { fill: #63eb24 }
+.s13 { fill: #2f971a }
 
 .s0:hover,
 .s3:hover,
@@ -330,4 +330,9 @@ pre.highlight::-webkit-scrollbar-corner,
 }
 .backo{
   background-image: url("../img/back_image.png");
+}
+.zone_map{
+  background: url("../img/bg_map.png") right no-repeat;
+  background-color: rgba(255, 255, 255, 0);
+  padding-right: 0;
 }

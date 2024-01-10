@@ -9,7 +9,7 @@ $(document).ready(function () {
     });
     // Function to display region info on hover
     function showRegionInfo(regionElement,regionName) {
-        $('#'+regionElement).css('fill', '#003700');
+        $('#'+regionElement).css('fill', '#C2A05C');
         $('#region-info').html("");
         $('#region-info').append(regionName);
         $('#region-info').show();
