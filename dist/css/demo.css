@@ -326,8 +326,8 @@ pre.highlight::-webkit-scrollbar-corner,
 .s13:hover { fill: #003700 }
 
 .navbar{
-  background-image: url("../dist/img/img.png");
+  background-image: url("../img/img.png");
 }
 .backo{
-  background-image: url("../dist/img/back_image.png");
+  background-image: url("../img/back_image.png");
 }
