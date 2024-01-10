@@ -1,6 +1,5 @@
 $(document).ready(function () {
     $('#region-dakhla,#region-laayoun,#region-guelmim,#region-souss,#region-deraa,#region-marrakech,#region-benimellal,#region-oriental,#region-casa,#region-fes,#region-rabat,#region-tanger').hover(function () {
-        debugger;
         var regionName = $(this).data('name');
         var regionElement = $(this).attr('id');
         showRegionInfo(regionElement,regionName);
@@ -20,7 +19,6 @@ $(document).ready(function () {
 
     // Function to hide region info on mouseout
     function hideRegionInfo(regionElement) {
-        debugger;
 
         if(regionElement==="region-dakhla")
         {
