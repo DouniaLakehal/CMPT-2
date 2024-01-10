@@ -1,0 +1,805 @@
+<!doctype html>
+<!--
+* Tabler - Premium and Open Source dashboard template with responsive and high quality UI.
+* @version 1.0.0-beta20
+* @link https://tabler.io
+* Copyright 2018-2023 The Tabler Authors
+* Copyright 2018-2023 codecalm.net Paweł Kuna
+* Licensed under MIT (https://github.com/tabler/tabler/blob/master/LICENSE)
+-->
+<html lang="en">
+<head>
+	 <meta charset="utf-8"/>
+	 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+	 <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+	 <title>CMPT</title>
+	 <!-- CSS files -->
+	 <link href="../dist/css/tabler.min.css?1692870487" rel="stylesheet"/>
+	 <link href="../dist/css/tabler-flags.min.css?1692870487" rel="stylesheet"/>
+	 <link href="../dist/css/tabler-payments.min.css?1692870487" rel="stylesheet"/>
+	 <link href="../dist/css/tabler-vendors.min.css?1692870487" rel="stylesheet"/>
+	 <link href="../dist/css/demo.min.css?1692870487" rel="stylesheet"/>
+	 <link href="../dist/css/demo.css" rel="stylesheet"/>
+	 <style>
+		  @import url('https://rsms.me/inter/inter.css');
+
+		  :root {
+				--tblr-font-sans-serif: 'Inter Var', -apple-system, BlinkMacSystemFont, San Francisco, Segoe UI, Roboto, Helvetica Neue, sans-serif;
+		  }
+
+		  body {
+				font-feature-settings: "cv03", "cv04", "cv11";
+		  }
+		  .modelclassbnt1 {
+			  margin-right: 10px;
+			  background: #0ca678 !important;
+			  border: 0 !important;
+			  padding: 10px 30px !important;
+			  color: #fff !important;
+			  transition: 0.4s !important;
+			  border-radius: 4px !important;
+
+		  }
+		  .modelclassbnt1:hover {
+			  background: #0ca678 !important;
+			  font-family: 'Rockwell';
+		  }
+
+
+		  .modelclassbnt2 {
+			  background: #aa744e;
+			  border: 0;
+			  padding: 10px 30px;
+			  color: #fff;
+			  transition: 0.4s;
+			  border-radius: 4px;
+
+		  }
+		  .modelclassbnt2:hover {
+			  background: #aa744e;
+			  font-family: 'Rockwell';
+		  }
+
+	 </style>
+	<style>
+		.image-zoom {
+			transition: transform 0.3s ease-in-out;
+		}
+
+		.image-zoom:hover {
+			transform: scale(3.0);
+			margin-left: 25px;
+		}
+	</style>
+</head>
+<body>
+<script src="../dist/js/demo-theme.min.js?1692870487"></script>
+<div class="page">
+
+	 <header class="navbar-expand-md">
+		  <div class="collapse navbar-collapse" id="navbar-menu">
+				<div class="navbar">
+					 <h1 class="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3"
+						  style="margin-left: 1%; height: 12vh;">
+						  <a href=".">
+								<img src="../static/logo1.png" alt="Tabler"
+									  class="navbar-brand-image">
+						  </a>
+					 </h1>
+					 <div class="d-flex justify-content-center m-auto">
+						  <ul class="navbar-nav">
+							  <li class="nav-item">
+								  <a class="nav-link" href="Dashboard.html">
+                    <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/home -->
+                      <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
+						   stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+						   stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path
+							  d="M5 12l-2 0l9 -9l9 9l-2 0"/><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7"/><path
+							  d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6"/></svg>
+                    </span>
+									  <span class="nav-link-title">
+                      Accueil
+                    </span>
+								  </a>
+							  </li>
+							  <li class="nav-item active">
+								  <a class="nav-link" href="Producteur.html">
+                    <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/checkbox -->
+                      <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
+						   stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+						   stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path
+							  d="M9 11l3 3l8 -8"/><path
+							  d="M20 12v6a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h9"/></svg>
+                    </span>
+									  <span class="nav-link-title">
+                      Producteurs
+                    </span>
+								  </a>
+							  </li>
+							  <li class="nav-item">
+								  <a class="nav-link" href="Produits.html">
+                    <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/checkbox -->
+                      <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
+						   stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+						   stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path
+							  d="M9 11l3 3l8 -8"/><path
+							  d="M20 12v6a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h9"/></svg>
+                    </span>
+									  <span class="nav-link-title">
+                      Produits
+                    </span>
+								  </a>
+							  </li>
+							  <li class="nav-item">
+								  <a class="nav-link" href="Etiquette.html">
+                    <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/checkbox -->
+                      <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
+						   stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+						   stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path
+							  d="M9 11l3 3l8 -8"/><path
+							  d="M20 12v6a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h9"/></svg>
+                    </span>
+									  <span class="nav-link-title">
+                      Etiquettes/Fonctions
+                    </span>
+								  </a>
+							  </li>
+							  <li class="nav-item">
+								  <a class="nav-link" href="Afficher.html">
+                    <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/checkbox -->
+                      <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
+						   stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+						   stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path
+							  d="M9 11l3 3l8 -8"/><path
+							  d="M20 12v6a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h9"/></svg>
+                    </span>
+									  <span class="nav-link-title">
+                      Afficher les produits
+                    </span>
+								  </a>
+							  </li>
+							  <li class="nav-item">
+								  <a class="nav-link" href="Resultat.html">
+                    <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/checkbox -->
+                      <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
+						   stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+						   stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path
+							  d="M9 11l3 3l8 -8"/><path
+							  d="M20 12v6a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h9"/></svg>
+                    </span>
+									  <span class="nav-link-title">
+                      Resultats
+                    </span>
+								  </a>
+							  </li>
+							  <li class="nav-item dropdown">
+								  <a class="nav-link dropdown-toggle" href="#navbar-extra" data-bs-toggle="dropdown"
+									 data-bs-auto-close="outside" role="button" aria-expanded="false">
+                    <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/star -->
+                      <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
+						   stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+						   stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path
+							  d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z"/></svg>
+                    </span>
+									  <span class="nav-link-title">
+                      Lots et paramètres
+                    </span>
+								  </a>
+								  <div class="dropdown-menu">
+									  <div class="dropdown-menu-columns">
+										  <div class="dropdown-menu-column">
+											  <a class="dropdown-item" href="Lot.html">
+												  Lot
+											  </a>
+											  <a class="dropdown-item" href="Table.html">
+												  Table
+											  </a>
+											  <a class="dropdown-item" href="">
+												  Paramètre
+											  </a>
+										  </div>
+									  </div>
+								  </div>
+							  </li>
+							  <li class="nav-item dropdown">
+								  <a class="nav-link dropdown-toggle" href="#navbar-extra" data-bs-toggle="dropdown"
+									 data-bs-auto-close="outside" role="button" aria-expanded="false">
+                    <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/star -->
+                      <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
+						   stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+						   stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path
+							  d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z"/></svg>
+                    </span>
+									  <span class="nav-link-title">
+                      Jury
+                    </span>
+								  </a>
+								  <div class="dropdown-menu">
+									  <div class="dropdown-menu-columns">
+										  <div class="dropdown-menu-column">
+											  <a class="dropdown-item" href="Groupe.html">
+												  Liste du groupe
+											  </a>
+											  <a class="dropdown-item" href="Jury.html">
+												  Liste du jury
+											  </a>
+										  </div>
+									  </div>
+								  </div>
+							  </li>
+							  <li class="nav-item">
+								  <a class="nav-link" href="">
+                    <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/checkbox -->
+                      <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
+						   stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+						   stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path
+							  d="M9 11l3 3l8 -8"/><path
+							  d="M20 12v6a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h9"/></svg>
+                    </span>
+									  <span class="nav-link-title">
+                      Utilisateurs
+                    </span>
+								  </a>
+							  </li>
+						  </ul>
+					 </div>
+				</div>
+		  </div>
+	 </header>
+
+	 <div class="page-wrapper">
+		  <!-- Page header -->
+
+
+		  <!-- Page body -->
+		  <div class="page-body">
+				<div class="container-xl">
+					 <div class="row justify-content-between">
+						  <div class="col-lg-3 mt-5">
+								<div class="input-icon mb-3">
+									 <input type="text" value="" class="form-control" placeholder="Rechercher…">
+									 <span class="input-icon-addon">
+                                  <!-- Download SVG icon from http://tabler-icons.io/i/search -->
+                                  <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
+													viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+													stroke-linecap="round" stroke-linejoin="round"><path stroke="none"
+																														  d="M0 0h24v24H0z"
+																														  fill="none"/><path
+														d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"/><path d="M21 21l-6 -6"/></svg>
+                                </span>
+								</div>
+						  </div>
+						 <div class="col-lg-3 mt-5">
+							 <div class="dropdown">
+								 <button class="btn dropdown-toggle align-text-top"
+										 data-bs-toggle="dropdown">
+									 Filtre
+								 </button>
+								 <div class="dropdown-menu dropdown-menu-end">
+									 <div class="modal-dialog" role="document" style="padding: 10px">
+										 <div class="modal-content" >
+											 <div class="modal-header text-center">
+
+												 <h2 style="color: white">Options de Filtre</h2>
+												 <button type="button" class="btn-close" data-bs-dismiss="modal"
+														 aria-label="Close"></button>
+
+
+											 </div>
+											 <div class="modal-body">
+												 <form class="row g-3 form1" >
+													 <div class="col-md-12 mt-3">
+														 <label class="form-label">Numéro producteur</label>
+														 <input type="text" class="form-control"
+
+																name="example-text-input"
+																>
+													 </div>
+													 <div class="col-md-12 mt-3">
+														 <label class="form-label"> Numéro producteur</label>
+														 <input type="text" class="form-control"
+
+																name="example-text-input"
+														 >
+													 </div>
+													 <div class="col-md-12 mt-3">
+														 <label for="Regions" class="form-label">Régions</label>
+														 <select id="Regions" class="form-control">
+															 <option selected>Choose...</option>
+															 <option>Rabat-Salé-Kénitra</option>
+															 <option>Fès-Meknès</option>
+															 <option>L’Oriental</option>
+															 <option>Marrakech-Safi</option>
+															 <option>Drâa-Tafilalet</option>
+															 <option>Guelmim-oued Noun</option>
+															 <option>Tanger-Tétouan-Al Hoceima</option>
+															 <option>Souss-Massa</option>
+															 <option>Casablanca-Settat</option>
+															 <option>Dakhla-Oued Eddahab</option>
+															 <option>Beni Mellal-Khénifra</option>
+															 <option>Laâyoune-Sakia Al Hamra</option>
+
+														 </select>
+													 </div>
+													 <div class="col-md-12 mt-3">
+														 <label for="province" class="form-label">Province</label>
+														 <select id="province" class="form-control">
+															 <option selected>Choose...</option>
+															 <option>Oujda-Angad</option>
+															 <option>Nador</option>
+															 <option>Driouch</option>
+															 <option>Jerada</option>
+															 <option>Berkan</option>
+															 <option>Taourirt</option>
+															 <option>Guercif</option>
+															 <option>Figuig</option>
+															 <option>Fès</option>
+															 <option>Meknès</option>
+															 <option>El Hajeb</option>
+															 <option>Ifrane</option>
+															 <option>Moulay Yacoub</option>
+															 <option>Sefrou</option>
+															 <option>Boulemane</option>
+															 <option>Taounate</option>
+															 <option>Taza</option>
+															 <option>Rabat</option>
+															 <option>Salé</option>
+															 <option>Skhirate-Témara</option>
+															 <option>Kénitra</option>
+															 <option>Khémisset</option>
+															 <option>Sidi Kacem</option>
+															 <option>Sidi Slimane</option>
+
+														 </select>
+													 </div>
+													 <div class="col-md-12 mt-3">
+														 <label for="province" class="form-label">Catégorie</label>
+														 <select id="province" class="form-control">
+															 <option selected>Choose...</option>
+															 <option>Miels</option>
+															 <option>Huiles alimentaire</option>
+															 <option>Produits d’origine animale</option>
+															 <option>Dattes et autres produits d’origine végétale</option>
+															 <option>Produits à base de céréales</option>
+														 </select>
+													 </div>
+												 </form>
+											 </div>
+											 <div class="modal-footer ">
+												 <button type="button" class="btn btn-primary modelclassbnt1" onclick="Enregistrermodel()">Appliqué
+												 </button>
+												 <button type="button" class="btn btn-secondary modelclassbnt2" onclick="closemodel()">Rénistialiser</button>
+
+											 </div>
+										 </div>
+									 </div>
+								 </div>
+
+							 </div>
+						 </div>
+						 <div class="col-lg-2 mt-5">
+							 <a href="#" class="btn btn-secondary btn-pill w-100" style="background-color: #aa744e;">
+								 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0 0 48 48">
+									 <path fill="#4CAF50" d="M41,10H25v28h16c0.553,0,1-0.447,1-1V11C42,10.447,41.553,10,41,10z"></path><path fill="#FFF" d="M32 15H39V18H32zM32 25H39V28H32zM32 30H39V33H32zM32 20H39V23H32zM25 15H30V18H25zM25 25H30V28H25zM25 30H30V33H25zM25 20H30V23H25z"></path><path fill="#2E7D32" d="M27 42L6 38 6 10 27 6z"></path><path fill="#FFF" d="M19.129,31l-2.411-4.561c-0.092-0.171-0.186-0.483-0.284-0.938h-0.037c-0.046,0.215-0.154,0.541-0.324,0.979L13.652,31H9.895l4.462-7.001L10.274,17h3.837l2.001,4.196c0.156,0.331,0.296,0.725,0.42,1.179h0.04c0.078-0.271,0.224-0.68,0.439-1.22L19.237,17h3.515l-4.199,6.939l4.316,7.059h-3.74V31z"></path>
+								 </svg>
+								 Télécharger excel
+							 </a>
+						 </div>
+					 </div>
+					 <div class="row row-cards">
+						  <div class="col-lg-12">
+								<div class="card">
+									 <div class="table-responsive">
+										  <table
+													 class="table table-vcenter table-mobile-md card-table">
+												<thead>
+												<tr>
+													 <th>Numéro/Nom</th>
+													 <th>Nom commercial</th>
+													 <th>Catégorie</th>
+													 <th>Producteur</th>
+													 <th>Composants</th>
+												</tr>
+												</thead>
+												<tbody>
+												<tr>
+													 <td data-label="Name">
+														  <div class="d-flex py-1 align-items-center">
+																<span class="avatar me-2 image-zoom"
+																		style="background-image: url(../static/produit1.png)"></span>
+																<div class="flex-fill">
+																	 <div class="font-weight-medium">P0001</div>
+
+																</div>
+														  </div>
+													 </td>
+													 <td data-label="Title">
+														  <div>Miel d’euphorbe</div>
+
+													 </td>
+													 <td data-label="Title">
+														  <div>MIELS (A)</div>
+
+													 </td>
+													 <td class="text-secondary" data-label="Role">
+														  Xls Consulting BIO
+													 </td>
+													 <td>
+														 <input  style="height:40px;width: 40px;border: 1px solid #ab8740;padding: 11px" value="20"  />
+													 </td>
+												</tr>
+												<tr>
+													 <td data-label="Name">
+														  <div class="d-flex py-1 align-items-center">
+																<span class="avatar me-2 image-zoom"
+																		style="background-image: url(../static/safran.jpg)"></span>
+																<div class="flex-fill">
+																	 <div class="font-weight-medium">P0002</div>
+
+																</div>
+														  </div>
+													 </td>
+													 <td data-label="Title">
+														  <div>Huile d’Argane</div>
+
+													 </td>
+													 <td data-label="Title">
+														  <div>HUILES ALIMENTAIRES (B)</div>
+
+													 </td>
+													 <td class="text-secondary" data-label="Role">
+														  Xls Consulting BIO
+													 </td>
+													 <td>
+														 <input  style="height:40px;width: 40px;border: 1px solid #ab8740;padding: 11px" value="20"  />
+													 </td>
+												</tr>
+												<tr>
+													 <td data-label="Name">
+														  <div class="d-flex py-1 align-items-center">
+																<span class="avatar me-2 image-zoom"
+																		style="background-image: url(../static/produit1.png)"></span>
+																<div class="flex-fill">
+																	 <div class="font-weight-medium">P0001</div>
+
+																</div>
+														  </div>
+													 </td>
+													 <td data-label="Title">
+														  <div>Miel d’euphorbe</div>
+
+													 </td>
+													 <td data-label="Title">
+														  <div>MIELS (A)</div>
+
+													 </td>
+													 <td class="text-secondary" data-label="Role">
+														  Xls Consulting BIO
+													 </td>
+													 <td>
+														 <input  style="height:40px;width: 40px;border: 1px solid #ab8740;padding: 11px" value="20"  />
+													 </td>
+
+												</tr>
+												<tr>
+													 <td data-label="Name">
+														  <div class="d-flex py-1 align-items-center">
+																<span class="avatar me-2 image-zoom"
+																		style="background-image: url(../static/safran.jpg)"></span>
+																<div class="flex-fill">
+																	 <div class="font-weight-medium">P0002</div>
+
+																</div>
+														  </div>
+													 </td>
+													 <td data-label="Title">
+														  <div>Huile d’Argane</div>
+
+													 </td>
+													 <td data-label="Title">
+														  <div>HUILES ALIMENTAIRES (B)</div>
+
+													 </td>
+													 <td class="text-secondary" data-label="Role">
+														  Xls Consulting BIO
+													 </td>
+													 <td>
+														 <input  style="height:40px;width: 40px;border: 1px solid #ab8740;padding: 11px" value="20"  />
+													 </td>
+
+												</tr>
+												<tr>
+													 <td data-label="Name">
+														  <div class="d-flex py-1 align-items-center">
+																<span class="avatar me-2 image-zoom"
+																		style="background-image: url(../static/produit1.png)"></span>
+																<div class="flex-fill">
+																	 <div class="font-weight-medium">P0001</div>
+
+																</div>
+														  </div>
+													 </td>
+													 <td data-label="Title">
+														  <div>Miel d’euphorbe</div>
+
+													 </td>
+													 <td data-label="Title">
+														  <div>MIELS (A)</div>
+
+													 </td>
+													 <td class="text-secondary" data-label="Role">
+														  Xls Consulting BIO
+													 </td>
+													 <td>
+														 <input  style="height:40px;width: 40px;border: 1px solid #ab8740;padding: 11px" value="20"  />
+													 </td>
+
+												</tr>
+												</tbody>
+										  </table>
+										  <ul class="pagination mt-2">
+												<li class="page-item disabled">
+													 <a class="page-link" href="#" tabindex="-1" aria-disabled="true">
+														  <!-- Download SVG icon from http://tabler-icons.io/i/chevron-left -->
+														  <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
+																 viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+																 stroke-linecap="round" stroke-linejoin="round">
+																<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+																<path d="M15 6l-6 6l6 6"/>
+														  </svg>
+													 </a>
+												</li>
+												<li class="page-item active"><a class="page-link" href="#">1</a></li>
+												<li class="page-item"><a class="page-link" href="#">2</a></li>
+												<li class="page-item"><a class="page-link" href="#">3</a></li>
+												<li class="page-item"><a class="page-link" href="#">4</a></li>
+
+										  </ul>
+										  <div class="modal modal-blur fade" id="modal-danger" tabindex="-1" role="dialog" aria-hidden="true">
+												<div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+													 <div class="modal-content">
+														  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+														 <div class="modal-status bg-warning"></div>
+														 <div class="modal-body text-center py-4">
+															 <svg xmlns="http://www.w3.org/2000/svg" class="icon mb-2 text-warning icon-lg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M9 12l2 2l4 -4" /></svg>
+															 <h3>Confirmation de la Réception</h3>
+															 <div class="text-secondary">Êtes-vous sûr de vouloir confirmer la réception de l'échantillon du produit?</div>
+														 </div>
+														 <div class="modal-footer">
+															 <div class="w-100">
+																 <div class="row">
+																	 <div class="col"><a data-bs-toggle="modal" data-bs-target="#exampleModal1" class="btn w-100 btn-danger" data-bs-dismiss="modal">
+																		 Non
+																	 </a></div>
+																	 <div class="col"><a data-bs-toggle="modal" data-bs-target="#exampleModal2" class="btn btn-success w-100" data-bs-dismiss="modal">
+																		 Oui
+																	 </a></div>
+																 </div>
+															 </div>
+														 </div>
+													 </div>
+												</div>
+										  </div>
+										  <div class="modal modal-blur fade" id="modal-success" tabindex="-1" role="dialog" aria-hidden="true">
+												<div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+													 <div class="modal-content photoback">
+														  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+														  <div class="modal-status bg-success"></div>
+														  <div class="modal-body text-center py-4">
+																<svg xmlns="http://www.w3.org/2000/svg" class="icon mb-2 text-green icon-lg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M9 12l2 2l4 -4" /></svg>
+																<h3>Êtes-vous sûr(e)?</h3>
+																<div class="text-secondary">Voulez-vous réellement homologuer ce produit ?</div>
+														  </div>
+														  <div class="modal-footer">
+																<div class="w-100">
+																	 <div class="row">
+
+																		  <div class="col"><a href="#" class="btn btn-success w-100" data-bs-dismiss="modal">
+																				Oui
+																		  </a></div>
+																		 <div class="col"><a href="#" class="btn w-100" data-bs-dismiss="modal">
+																			 Non
+																		 </a></div>
+																	 </div>
+																</div>
+														  </div>
+													 </div>
+												</div>
+										  </div>
+										 <div class="modal modal-blur fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+											  aria-hidden="true">
+											 <div class="modal-dialog" role="document">
+												 <div class="modal-content" >
+													 <div class="modal-header text-center">
+
+														 <h2 style="color:white">Cause de refus</h2>
+														 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+
+													 </div>
+													 <div class="modal-body">
+														 <h2>Motif</h2>
+														 <textarea rows="10" class="form-control"></textarea>
+													 </div>
+													 <div class="modal-footer ">
+														 <button type="button" class="btn btn-secondary modelclassbnt2" onclick="closemodel()">Fermer</button>
+														 <button type="button" class="btn btn-primary modelclassbnt1" onclick="Enregistrermodel()">Enregistrer
+														 </button>
+
+													 </div>
+												 </div>
+											 </div>
+										 </div>
+										 <div class="modal modal-blur fade" id="exampleModal2" tabindex="-1" role="dialog" aria-hidden="true">
+											 <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+												 <div class="modal-content">
+													 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+													 <div class="modal-status bg-success"></div>
+													 <div class="modal-body text-center py-4">
+														 <svg xmlns="http://www.w3.org/2000/svg" class="icon mb-2 text-green icon-lg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M9 12l2 2l4 -4" /></svg>
+														 <h3>Confirmation de Réception!</h3>
+														 <div class="text-secondary">L'échantillon du produit a été réceptionné.</div>
+													 </div>
+													 <div class="modal-footer">
+														 <div class="w-100">
+															 <div class="row">
+																 <div class="col"><a  data-bs-toggle="modal" data-bs-target="#affectation" class="btn btn-success w-100" data-bs-dismiss="modal">
+																	 Affectation au Lot
+																 </a></div>
+															 </div>
+														 </div>
+													 </div>
+												 </div>
+											 </div>
+										 </div>
+										 <div class="modal modal-blur fade" id="modal-large" tabindex="-1" role="dialog"
+												 aria-hidden="true">
+												<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+													 <div class="modal-content">
+														  <div class="modal-header">
+																<h5 class="modal-title">Composants</h5>
+																<button type="button" class="btn-close" data-bs-dismiss="modal"
+																		  aria-label="Close"></button>
+														  </div>
+														  <div class="modal-body">
+																<div class="table-responsive">
+																	 <table
+																				class="table table-vcenter card-table table-striped">
+																		  <thead>
+																		  <tr>
+																				<th>COMPOSANTS</th>
+																				<th>MATIÈRE PREMIÈRE</th>
+																				<th>FOURNISSEUR</th>
+																				<th>LIEU DE PRODUCTION</th>
+																		  </tr>
+																		  </thead>
+																		  <tbody>
+																		  <tr>
+																				<td>C1</td>
+																				<td class="text-secondary">
+																					 100%
+																				</td>
+																				<td class="text-secondary">Ahmed alami</td>
+																				<td class="text-secondary">
+																					 Rabat
+																				</td>
+																		  </tr>
+																		  <tr>
+																				<td>C2</td>
+																				<td class="text-secondary">
+																					 90%
+																				</td>
+																				<td class="text-secondary">Hajat kamali</td>
+																				<td class="text-secondary">
+																					 Fes
+																				</td>
+																		  </tr>
+																		  </tbody>
+																	 </table>
+																</div>
+														  </div>
+														  <div class="modal-footer">
+																<button type="button" class="btn me-auto" data-bs-dismiss="modal">
+																	 Fermer
+																</button>
+														  </div>
+													 </div>
+												</div>
+										  </div>
+                                         <div class="modal modal-blur fade" id="affectation" tabindex="-1" role="dialog"
+                                              aria-hidden="true">
+                                             <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                                                 <div class="modal-content">
+                                                     <div class="modal-header">
+                                                         <h5 class="modal-title">Affectation au lot</h5>
+                                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                                 aria-label="Close"></button>
+                                                     </div>
+                                                     <div class="modal-body">
+														 <div class="table-responsive">
+															 <table
+																	 class="table table-vcenter card-table table-striped">
+																 <thead>
+																 <tr>
+																	 <th>Numéro Produits</th>
+																	 <th>Nom Produits</th>
+																	 <th>Lots</th>
+																 </tr>
+																 </thead>
+																 <tbody>
+																 <tr>
+																	 <td>P0001</td>
+																	 <td>D’euphorbe</td>
+																	 <td class="text-secondary">
+																		 <select id="lot1" class="form-control">
+																			 <option selected>Choose...</option>
+																			 <option>LA 01</option>
+																			 <option>LA 02</option>
+																			 <option>LA 03</option>
+																			 <option>LA 04</option>
+																		 </select>
+																	 </td>
+																 </tr>
+																 <tr>
+																	 <td>P0002</td>
+																	 <td>Huile d’olive</td>
+																	 <td class="text-secondary">
+																		 <select id="lot" class="form-control">
+																			 <option selected>Choose...</option>
+																			 <option>LA 01</option>
+																			 <option>LA 02</option>
+																			 <option>LA 03</option>
+																			 <option>LA 04</option>
+																		 </select>
+																	 </td>
+																 </tr>
+																 <tr>
+																	 <td>P0003</td>
+																	 <td>Huile d’Argane</td>
+																	 <td class="text-secondary">
+																		 <select id="lot3" class="form-control">
+																			 <option selected>Choose...</option>
+																			 <option>LA 01</option>
+																			 <option>LA 02</option>
+																			 <option>LA 03</option>
+																			 <option>LA 04</option>
+																		 </select>
+																	 </td>
+																 </tr>
+																 </tbody>
+															 </table>
+														 </div>
+                                                     </div>
+                                                     <div class="modal-footer">
+														 <button type="button" class="btn btn-secondary modelclassbnt2" onclick="closemodel()">Fermer</button>
+														 <button type="button" class="btn btn-primary modelclassbnt1" onclick="Enregistrermodel()">Enregistrer
+														 </button>
+
+													 </div>
+                                                 </div>
+                                             </div>
+                                         </div>
+
+									 </div>
+								</div>
+						  </div>
+					 </div>
+				</div>
+		  </div>
+	 </div>
+</div>
+<!-- Libs JS -->
+<!-- Tabler Core -->
+<script src="../dist/js/tabler.min.js?1692870487" defer></script>
+<script src="../dist/js/demo.min.js?1692870487" defer></script>
+<script>
+	function closemodel() {
+
+		window.location.reload();
+	}
+	function Enregistrermodel() {
+		window.location.reload();
+	}
+</script>
+</body>
+</html>

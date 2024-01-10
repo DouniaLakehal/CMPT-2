@@ -33,6 +33,35 @@
 		  .dropdown-item:hover{
 				background: #E0F4FF;
 		  }
+		  .modelclassbnt1 {
+			  margin-right: 10px;
+			  background: #0ca678 !important;
+			  border: 0 !important;
+			  padding: 10px 30px !important;
+			  color: #fff !important;
+			  transition: 0.4s !important;
+			  border-radius: 4px !important;
+
+		  }
+		  .modelclassbnt1:hover {
+			  background: #0ca678 !important;
+			  font-family: 'Rockwell';
+		  }
+
+
+		  .modelclassbnt2 {
+			  background: #aa744e;
+			  border: 0;
+			  padding: 10px 30px;
+			  color: #fff;
+			  transition: 0.4s;
+			  border-radius: 4px;
+
+		  }
+		  .modelclassbnt2:hover {
+			  background: #aa744e;
+			  font-family: 'Rockwell';
+		  }
 	 </style>
 </head>
 <body>
@@ -233,6 +262,61 @@
                                 </span>
 								</div>
 						  </div>
+						 <div class="col-lg-3 mt-5">
+							 <div class="dropdown">
+								 <button class="btn dropdown-toggle align-text-top"
+										 data-bs-toggle="dropdown">
+									 Filtre
+								 </button>
+								 <div class="dropdown-menu dropdown-menu-end">
+									 <div class="modal-dialog" role="document" style="padding: 10px">
+										 <div class="modal-content" >
+											 <div class="modal-header text-center">
+
+												 <h2 style="color: white">Options de Filtre</h2>
+												 <button type="button" class="btn-close" data-bs-dismiss="modal"
+														 aria-label="Close"></button>
+
+
+											 </div>
+											 <div class="modal-body">
+												 <form class="row g-3 form1" >
+													 <div class="col-md-12 mt-3">
+														 <label class="form-label">Lot</label>
+														 <input type="text" class="form-control"
+
+																name="example-text-input"
+														 >
+													 </div>
+													 <div class="col-md-12 mt-3">
+														 <label class="form-label">Numéro produit</label>
+														 <input type="text" class="form-control"
+
+																name="example-text-input"
+														 >
+													 </div>
+													 <div class="col-md-12 mt-3">
+														 <label class="form-label">Numéro Table</label>
+														 <input type="text" class="form-control"
+
+																name="example-text-input"
+														 >
+													 </div>
+
+												 </form>
+											 </div>
+											 <div class="modal-footer ">
+												 <button type="button" class="btn btn-primary modelclassbnt1" onclick="Enregistrermodel()">Appliqué
+												 </button>
+												 <button type="button" class="btn btn-secondary modelclassbnt2" onclick="closemodel()">Rénistialiser</button>
+
+											 </div>
+										 </div>
+									 </div>
+								 </div>
+
+							 </div>
+						 </div>
 					 </div>
 					 <div class="row row-cards">
 						  <div class="col-lg-12">
@@ -455,7 +539,9 @@
 																				<th>Numéro/Nom</th>
 																				<th>Nom commercial</th>
 																				<th>Catégorie</th>
-																				<th>Statut</th>
+																				<th>Sous catégorie</th>
+																			    <th>Lot</th>
+																			    <th>Table</th>
 																				<th>Noter</th>
 																		  </tr>
 																		  </thead>
@@ -467,19 +553,22 @@
 																		style="background-image: url(../static/produit1.png)"></span>
 																						  <div class="flex-fill">
 																								<div class="font-weight-medium">P0001</div>
-																								<div class="text-secondary">D’euphorbe</div>
+
 																						  </div>
 																					 </div>
 																				</td>
 																				<td data-label="Title">
 																					 <div>Miel d’euphorbe</div>
-																					 <div class="text-secondary">Délice de l’Atlas</div>
+
 																				</td>
 																				<td data-label="Title">
 																					 <div>MIELS (A)</div>
-																					 <div class="text-secondary">A2. D’euphorbe</div>
+
 																				</td>
-																				<td><span class="badge bg-green text-blue-fg">Prix d'innovation</span>
+																			  <td>A2. D’euphorbe</td>
+																			  <td>LA 01</td>
+																			  <td>TA 01</td>
+<!--																				<td><span class="badge bg-green text-blue-fg">Prix d'innovation</span>-->
 																				<td>
 																					 <a data-bs-toggle="modal" data-bs-target="#modal-team"><svg xmlns="http://www.w3.org/2000/svg" style="color: #0c8599" class="icon icon-tabler icon-tabler-pencil-plus" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
 																						  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -497,19 +586,23 @@
 																		style="background-image: url(../static/safran.jpg)"></span>
 																						  <div class="flex-fill">
 																								<div class="font-weight-medium">P0002</div>
-																								<div class="text-secondary">Huile d’olive</div>
+
 																						  </div>
 																					 </div>
 																				</td>
 																				<td data-label="Title">
 																					 <div>Huile d’Argane</div>
-																					 <div class="text-secondary">IGP</div>
+
 																				</td>
 																				<td data-label="Title">
 																					 <div>HUILES ALIMENTAIRES (B)</div>
-																					 <div class="text-secondary">B1. Huile d’olive</div>
+
 																				</td>
-																				<td><span class="badge bg-yellow text-blue-fg">Medaille d'or</span></td>
+
+																			  <td>B1. Huile d’olive</td>
+																			  <td>LA 02</td>
+																			  <td>TA 01</td>
+<!--																				<td><span class="badge bg-yellow text-blue-fg">Medaille d'or</span></td>-->
 																				<td>
 																					 <a data-bs-toggle="modal" data-bs-target="#modal-team"><svg xmlns="http://www.w3.org/2000/svg" style="color: #0c8599" class="icon icon-tabler icon-tabler-pencil-plus" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
 																						  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
