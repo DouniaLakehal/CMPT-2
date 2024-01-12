@@ -340,3 +340,12 @@ pre.highlight::-webkit-scrollbar-corner,
 .nav-link-icon > svg{
   fill: #ba704b ;
 }
+
+li.nav-item  a span.nav-link-icon.d-md-none.d-lg-inline-block{
+  width: 30px;
+  height: 30px;
+}
+
+li.nav-item  a  svg{
+  --tblr-icon-size: 30px;
+}
