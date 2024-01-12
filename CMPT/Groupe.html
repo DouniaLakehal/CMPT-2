@@ -36,6 +36,35 @@
 		.dropdown-item:hover {
 			background: #E0F4FF;
 		}
+		.modelclassbnt1 {
+			margin-right: 10px;
+			background: #0ca678 !important;
+			border: 0 !important;
+			padding: 10px 30px !important;
+			color: #fff !important;
+			transition: 0.4s !important;
+			border-radius: 4px !important;
+
+		}
+		.modelclassbnt1:hover {
+			background: #0ca678 !important;
+			font-family: 'Rockwell';
+		}
+
+
+		.modelclassbnt2 {
+			background: #aa744e;
+			border: 0;
+			padding: 10px 30px;
+			color: #fff;
+			transition: 0.4s;
+			border-radius: 4px;
+
+		}
+		.modelclassbnt2:hover {
+			background: #aa744e;
+			font-family: 'Rockwell';
+		}
 	</style>
 </head>
 
@@ -467,10 +496,65 @@
 			<div class="page-body">
 				<div class="container-xl">
 					 <div class="row justify-content-between">
+						 <div class="col-lg-3 mt-5">
+							 <div class="dropdown">
+								 <button class="btn dropdown-toggle align-text-top"
+										 data-bs-toggle="dropdown">
+									 Filtre
+								 </button>
+								 <div class="dropdown-menu dropdown-menu-end">
+									 <div class="modal-dialog" role="document" style="padding: 10px">
+										 <div class="modal-content" >
+
+											 <div class="modal-body">
+												 <form class="row g-3 form1" >
+													 <div class="col-md-12 mt-3">
+														 <label class="form-label">Présedent</label>
+														 <input type="text" class="form-control"
+
+																name="example-text-input"
+														 >
+													 </div>
+													 <div class="col-md-12 mt-3">
+														 <label class="form-label">Vice Présedent</label>
+														 <input type="text" class="form-control"
+
+																name="example-text-input"
+														 >
+													 </div>
+													 <div class="col-md-12 mt-3">
+														 <label class="form-label">Spécialistee</label>
+														 <input type="text" class="form-control"
+
+																name="example-text-input"
+														 >
+													 </div>
+													 <div class="col-md-12 mt-3">
+														 <label class="form-label"> Numéro groupe jury</label>
+														 <input type="text" class="form-control"
+
+																name="example-text-input"
+														 >
+													 </div>
+
+												 </form>
+											 </div>
+											 <div class="modal-footer ">
+												 <button type="button" class="btn btn-primary modelclassbnt1" onclick="Enregistrermodel()">Appliqué
+												 </button>
+												 <button type="button" class="btn btn-secondary modelclassbnt2" onclick="closemodel()">Rénistialiser</button>
+
+											 </div>
+										 </div>
+									 </div>
+								 </div>
+
+							 </div>
+						 </div>
 
 						  <div class="col-lg-2 mt-5">
 								<a href="#" class="btn btn-secondary btn-pill w-100" style="background-color: #aa744e;">
-									 Nouveau groupe
+									 Télécharger Excel
 								</a>
 						  </div>
 					 </div>
@@ -513,7 +597,8 @@
 													 <td>Fatime elkhattabi</td>
 													 <td>Karim Bensaid</td>
 													 <td>Rabat</td>
-													 <td>Informatique,Mathématiques</td>
+													 <td>Consomateur
+													 </td>
 													 <td>
 														  <div class="dropdown">
 																<button class="btn dropdown-toggle align-text-top"
@@ -550,6 +635,19 @@
 																		  </svg>
 																		  Supprimer
 																	 </a>
+																	<a class="dropdown-item" data-bs-toggle="modal"
+																	   data-bs-target="#modal-affect">
+																		<svg xmlns="http://www.w3.org/2000/svg" style="color: #0c8599"
+																			 class="icon icon-tabler icon-tabler-pencil" width="24"
+																			 height="24" viewBox="0 0 24 24" stroke-width="2"
+																			 stroke="currentColor" fill="none" stroke-linecap="round"
+																			 stroke-linejoin="round">
+																			<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+																			<path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4"/>
+																			<path d="M13.5 6.5l4 4"/>
+																		</svg>
+																		Affecter les dégustateurs
+																	</a>
 																</div>
 														  </div>
 													 </td>
@@ -574,7 +672,7 @@
 													 <td>Youssra elkhattabi</td>
 													 <td>Said Bensaid</td>
 													 <td>Fès</td>
-													 <td>Génie Civile</td>
+													 <td>Producteur</td>
 													 <td>
 														  <div class="dropdown">
 																<button class="btn dropdown-toggle align-text-top"
@@ -611,6 +709,19 @@
 																		  </svg>
 																		  Supprimer
 																	 </a>
+																	<a class="dropdown-item" data-bs-toggle="modal"
+																	   data-bs-target="#modal-affect">
+																		<svg xmlns="http://www.w3.org/2000/svg" style="color: #0c8599"
+																			 class="icon icon-tabler icon-tabler-pencil" width="24"
+																			 height="24" viewBox="0 0 24 24" stroke-width="2"
+																			 stroke="currentColor" fill="none" stroke-linecap="round"
+																			 stroke-linejoin="round">
+																			<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+																			<path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4"/>
+																			<path d="M13.5 6.5l4 4"/>
+																		</svg>
+																		Affecter les dégustateurs
+																	</a>
 																</div>
 														  </div>
 													 </td>
@@ -635,7 +746,7 @@
 													 <td>Souad elkhattabi</td>
 													 <td>Yassine Bensaid</td>
 													 <td>Tanger</td>
-													 <td>Mathématiques</td>
+													 <td>Spécialiste</td>
 													 <td>
 														  <div class="dropdown">
 																<button class="btn dropdown-toggle align-text-top"
@@ -672,6 +783,19 @@
 																		  </svg>
 																		  Supprimer
 																	 </a>
+																	<a class="dropdown-item" data-bs-toggle="modal"
+																	   data-bs-target="#modal-affect">
+																		<svg xmlns="http://www.w3.org/2000/svg" style="color: #0c8599"
+																			 class="icon icon-tabler icon-tabler-pencil" width="24"
+																			 height="24" viewBox="0 0 24 24" stroke-width="2"
+																			 stroke="currentColor" fill="none" stroke-linecap="round"
+																			 stroke-linejoin="round">
+																			<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+																			<path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4"/>
+																			<path d="M13.5 6.5l4 4"/>
+																		</svg>
+																		Affecter les dégustateurs
+																	</a>
 																</div>
 														  </div>
 													 </td>
@@ -696,7 +820,7 @@
 													 <td>Kawtar elkhattabi</td>
 													 <td>Anouar Bensaid</td>
 													 <td>Rabat</td>
-													 <td>Informatique</td>
+													 <td>Spécialiste</td>
 													 <td>
 														  <div class="dropdown">
 																<button class="btn dropdown-toggle align-text-top"
@@ -733,6 +857,19 @@
 																		  </svg>
 																		  Supprimer
 																	 </a>
+																	<a class="dropdown-item" data-bs-toggle="modal"
+																	   data-bs-target="#modal-affect">
+																		<svg xmlns="http://www.w3.org/2000/svg" style="color: #0c8599"
+																			 class="icon icon-tabler icon-tabler-pencil" width="24"
+																			 height="24" viewBox="0 0 24 24" stroke-width="2"
+																			 stroke="currentColor" fill="none" stroke-linecap="round"
+																			 stroke-linejoin="round">
+																			<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+																			<path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4"/>
+																			<path d="M13.5 6.5l4 4"/>
+																		</svg>
+																		Affecter les dégustateurs
+																	</a>
 																</div>
 														  </div>
 													 </td>
@@ -757,7 +894,8 @@
 													 <td>dounia mojahid</td>
 													 <td>Karim salmi</td>
 													 <td>Rabat</td>
-													 <td>Informatique</td>
+													 <td>Consomateur
+													 </td>
 													 <td>
 														  <div class="dropdown">
 																<button class="btn dropdown-toggle align-text-top"
@@ -794,6 +932,19 @@
 																		  </svg>
 																		  Supprimer
 																	 </a>
+																	<a class="dropdown-item" data-bs-toggle="modal"
+																	   data-bs-target="#modal-affect">
+																		<svg xmlns="http://www.w3.org/2000/svg" style="color: #0c8599"
+																			 class="icon icon-tabler icon-tabler-pencil" width="24"
+																			 height="24" viewBox="0 0 24 24" stroke-width="2"
+																			 stroke="currentColor" fill="none" stroke-linecap="round"
+																			 stroke-linejoin="round">
+																			<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+																			<path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4"/>
+																			<path d="M13.5 6.5l4 4"/>
+																		</svg>
+																		Affecter les dégustateurs
+																	</a>
 																</div>
 														  </div>
 													 </td>
@@ -818,7 +969,7 @@
 													 <td>Fatime elkhattabi</td>
 													 <td>Karim Bensaid</td>
 													 <td>Rabat</td>
-													 <td>Informatique,Mathématiques</td>
+													 <td>Producteur</td>
 													 <td>
 														  <div class="dropdown">
 																<button class="btn dropdown-toggle align-text-top"
@@ -855,6 +1006,19 @@
 																		  </svg>
 																		  Supprimer
 																	 </a>
+																	<a class="dropdown-item" data-bs-toggle="modal"
+																	   data-bs-target="#modal-affect">
+																		<svg xmlns="http://www.w3.org/2000/svg" style="color: #0c8599"
+																			 class="icon icon-tabler icon-tabler-pencil" width="24"
+																			 height="24" viewBox="0 0 24 24" stroke-width="2"
+																			 stroke="currentColor" fill="none" stroke-linecap="round"
+																			 stroke-linejoin="round">
+																			<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+																			<path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4"/>
+																			<path d="M13.5 6.5l4 4"/>
+																		</svg>
+																		Affecter les dégustateurs
+																	</a>
 																</div>
 														  </div>
 													 </td>
@@ -1096,7 +1260,10 @@
 
 													<label class="form-label mt-3">Spécialiste</label>
 													<input type="text" class="form-control"
-														value="Informatique,Mathématiques" />
+														value="Producteur" />
+
+
+
 
 												</div>
 												<div class="modal-footer">
@@ -1111,6 +1278,61 @@
 											</div>
 										</div>
 									</div>
+										 <div class="modal modal-blur fade" id="modal-affect" tabindex="-1" role="dialog"
+											  aria-hidden="true">
+											 <div class="modal-dialog modal-dialog-centered" role="document">
+												 <div class="modal-content">
+													 <div class="modal-header">
+														 <h5 class="modal-title">Affecter un jurry a un groupe</h5>
+														 <button type="button" class="btn-close" data-bs-dismiss="modal"
+																 aria-label="Close"></button>
+													 </div>
+													 <div class="modal-body">
+
+
+														 <label for="province" class="form-label">Catégorie</label>
+														 <select id="province" class="form-control">
+															 <option selected>Choisir...</option>
+															 <option>Miels</option>
+															 <option>Huiles alimentaire</option>
+															 <option>Produits d’origine animale</option>
+															 <option>Dattes et autres produits d’origine végétale</option>
+															 <option>Produits à base de céréales</option>
+														 </select>
+
+														 <label for="province" class="form-label">Sous-catégorie</label>
+														 <select id="province" class="form-control">
+															 <option selected>Choisir...</option>
+															 <option>Miel d’euphorbe</option>
+															 <option>Huile d’Argane</option>
+															 <option>Huile d’olive</option>
+														 </select>
+
+														 <label for="miel" class="form-label mt-2">Selectionner un jury</label>
+														 <select id="miel" class="form-control">
+															 <option selected >Choisir...</option>
+															 <option>Jury 1</option>
+															 <option>Jury 2</option>
+															 <option>Jury 3</option>
+															 <option>Jury 4</option>
+															 <option>Jury 5</option>
+														 </select>
+
+
+
+
+
+													 </div>
+													 <div class="modal-footer">
+
+														 <a type="button" class="btn btn-primary"
+																 href="../static/LOT.pdf">
+															 Imprimer
+														 </a>
+													 </div>
+												 </div>
+											 </div>
+										 </div>
 								</div>
 							</div>
 						</div>
