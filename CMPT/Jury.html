@@ -36,6 +36,35 @@
 		.dropdown-item:hover {
 			background: #E0F4FF;
 		}
+		.modelclassbnt1 {
+			margin-right: 10px;
+			background: #0ca678 !important;
+			border: 0 !important;
+			padding: 10px 30px !important;
+			color: #fff !important;
+			transition: 0.4s !important;
+			border-radius: 4px !important;
+
+		}
+		.modelclassbnt1:hover {
+			background: #0ca678 !important;
+			font-family: 'Rockwell';
+		}
+
+
+		.modelclassbnt2 {
+			background: #aa744e;
+			border: 0;
+			padding: 10px 30px;
+			color: #fff;
+			transition: 0.4s;
+			border-radius: 4px;
+
+		}
+		.modelclassbnt2:hover {
+			background: #aa744e;
+			font-family: 'Rockwell';
+		}
 	</style>
 </head>
 
@@ -479,9 +508,70 @@
 								</span>
 							</div>
 						</div>-->
-						<div class="col-lg-2 mt-5">
+						<div class="col-lg-3 mt-5">
+							<div class="dropdown">
+								<button class="btn dropdown-toggle align-text-top"
+										data-bs-toggle="dropdown">
+									Filtre
+								</button>
+								<div class="dropdown-menu dropdown-menu-end">
+									<div class="modal-dialog" role="document" style="padding: 10px">
+										<div class="modal-content" >
+
+											<div class="modal-body">
+												<form class="row g-3 form1" >
+													<div class="col-md-12 mt-3">
+														<label class="form-label">Nom</label>
+														<input type="text" class="form-control"
+
+															   name="example-text-input"
+														>
+													</div>
+													<div class="col-md-12 mt-3">
+														<label class="form-label">Type</label>
+														<input type="text" class="form-control"
+
+															   name="example-text-input"
+														>
+													</div>
+
+													<div class="col-md-12 mt-3">
+														<label for="Regions" class="form-label">Régions</label>
+														<select id="Regions" class="form-control">
+															<option selected>Choisir...</option>
+															<option>Rabat-Salé-Kénitra</option>
+															<option>Fès-Meknès</option>
+															<option>L’Oriental</option>
+															<option>Marrakech-Safi</option>
+															<option>Drâa-Tafilalet</option>
+															<option>Guelmim-oued Noun</option>
+															<option>Tanger-Tétouan-Al Hoceima</option>
+															<option>Souss-Massa</option>
+															<option>Casablanca-Settat</option>
+															<option>Dakhla-Oued Eddahab</option>
+															<option>Beni Mellal-Khénifra</option>
+															<option>Laâyoune-Sakia Al Hamra</option>
+
+														</select>
+													</div>
+
+												</form>
+											</div>
+											<div class="modal-footer ">
+												<button type="button" class="btn btn-primary modelclassbnt1" onclick="Enregistrermodel()">Appliqué
+												</button>
+												<button type="button" class="btn btn-secondary modelclassbnt2" onclick="closemodel()">Rénistialiser</button>
+
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+						<div class="col-lg-3 mt-5">
 							<a href="#" class="btn btn-secondary btn-pill w-100" style="background-color: #aa744e;">
-								Nouveau jury
+								Télécharger excel
 							</a>
 						</div>
 					</div>
@@ -550,6 +640,42 @@
 																</svg>
 																Supprimer
 															</a>
+															<a class="dropdown-item" data-bs-toggle="modal"
+															   data-bs-target="#modal-add">
+																<svg xmlns="http://www.w3.org/2000/svg"
+																	 style="color: #007bff"
+																class="icon icon-tabler icon-tabler-user"
+																width="24" height="24" viewBox="0 0 24 24"
+																stroke-width="2" stroke="currentColor" fill="none"
+																stroke-linecap="round" stroke-linejoin="round">
+																<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+																<circle cx="12" cy="7" r="4" />
+																<path d="M6 21v-1a3.5 3.5 0 0 1 6.5 -2" />
+																<path d="M21 21v-1a3.5 3.5 0 0 0 -6.5 -2" />
+																</svg>
+
+
+
+																Ajouter
+															</a>
+															<a class="dropdown-item" data-bs-toggle="modal"
+															   data-bs-target="#modal-afficher">
+																<svg xmlns="http://www.w3.org/2000/svg"
+																	 style="color: #4caf50"
+																class="icon icon-tabler icon-tabler-eye"
+																width="24" height="24" viewBox="0 0 24 24"
+																stroke-width="2" stroke="currentColor" fill="none"
+																stroke-linecap="round" stroke-linejoin="round">
+																<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+																<circle cx="12" cy="12" r="5" />
+																<path d="M12 12l9 2l-9 2l-9 -2l9 -2" />
+																</svg>
+
+
+																Afficher
+															</a>
+
+
 														</div>
 													</div>
 												</td>
@@ -842,16 +968,48 @@
 
 													<label class="form-label mt-3">Région</label>
 													<select type="text" class="form-control">
-														<option selected>Rabat-Salé Kénitra</option>
-														<option>Fes/Meknas</option>
-														<option>L'Oriental</option>
-														<option>Souss Massa Derâa</option>
+														<option selected>Choisir...</option>
+														<option selected>Rabat-Salé-Kénitra</option>
+														<option>Fès-Meknès</option>
+														<option>L’Oriental</option>
+														<option>Marrakech-Safi</option>
+														<option>Drâa-Tafilalet</option>
+														<option>Guelmim-oued Noun</option>
+														<option>Tanger-Tétouan-Al Hoceima</option>
+														<option>Souss-Massa</option>
+														<option>Casablanca-Settat</option>
+														<option>Dakhla-Oued Eddahab</option>
+														<option>Beni Mellal-Khénifra</option>
+														<option>Laâyoune-Sakia Al Hamra</option>
 													</select>
 
 													<label class="form-label mt-3">Province</label>
 													<select type="text" class="form-control">
-														<option selected>Préfecture de Rabat</option>
-														<option>Préfecture Salé</option>
+														<option selected>Choisir...</option>
+														<option>Oujda-Angad</option>
+														<option>Nador</option>
+														<option>Driouch</option>
+														<option>Jerada</option>
+														<option>Berkan</option>
+														<option>Taourirt</option>
+														<option>Guercif</option>
+														<option>Figuig</option>
+														<option>Fès</option>
+														<option>Meknès</option>
+														<option>El Hajeb</option>
+														<option>Ifrane</option>
+														<option>Moulay Yacoub</option>
+														<option>Sefrou</option>
+														<option>Boulemane</option>
+														<option>Taounate</option>
+														<option>Taza</option>
+														<option>Rabat</option>
+														<option>Salé</option>
+														<option>Skhirate-Témara</option>
+														<option selected>Kénitra</option>
+														<option>Khémisset</option>
+														<option>Sidi Kacem</option>
+														<option>Sidi Slimane</option>
 													</select>
 
 													<label class="form-label mt-2">Email</label>
@@ -871,6 +1029,155 @@
 											</div>
 										</div>
 									</div>
+									<div class="modal modal-blur fade" id="modal-add" tabindex="-1" role="dialog"
+										 aria-hidden="true">
+										<div class="modal-dialog modal-dialog-centered" role="document">
+											<div class="modal-content">
+												<div class="modal-header">
+													<h5 class="modal-title">Ajouter le jury</h5>
+													<button type="button" class="btn-close" data-bs-dismiss="modal"
+															aria-label="Close"></button>
+												</div>
+												<div class="modal-body">
+
+													<label class="form-label">Nom</label>
+													<input type="text" class="form-control"  />
+
+													<label class="form-label mt-2">Type</label>
+													<input type="text" class="form-control"  />
+
+													<label class="form-label mt-3">Région</label>
+													<select type="text" class="form-control">
+														<option selected>Choisir...</option>
+														<option>Rabat-Salé-Kénitra</option>
+														<option>Fès-Meknès</option>
+														<option>L’Oriental</option>
+														<option>Marrakech-Safi</option>
+														<option>Drâa-Tafilalet</option>
+														<option>Guelmim-oued Noun</option>
+														<option>Tanger-Tétouan-Al Hoceima</option>
+														<option>Souss-Massa</option>
+														<option>Casablanca-Settat</option>
+														<option>Dakhla-Oued Eddahab</option>
+														<option>Beni Mellal-Khénifra</option>
+														<option>Laâyoune-Sakia Al Hamra</option>
+													</select>
+
+													<label class="form-label mt-3">Province</label>
+													<select type="text" class="form-control">
+														<option selected>Choisir...</option>
+														<option>Oujda-Angad</option>
+														<option>Nador</option>
+														<option>Driouch</option>
+														<option>Jerada</option>
+														<option>Berkan</option>
+														<option>Taourirt</option>
+														<option>Guercif</option>
+														<option>Figuig</option>
+														<option>Fès</option>
+														<option>Meknès</option>
+														<option>El Hajeb</option>
+														<option>Ifrane</option>
+														<option>Moulay Yacoub</option>
+														<option>Sefrou</option>
+														<option>Boulemane</option>
+														<option>Taounate</option>
+														<option>Taza</option>
+														<option>Rabat</option>
+														<option>Salé</option>
+														<option>Skhirate-Témara</option>
+														<option>Kénitra</option>
+														<option>Khémisset</option>
+														<option>Sidi Kacem</option>
+														<option>Sidi Slimane</option>
+													</select>
+
+													<label class="form-label mt-2">Email</label>
+													<input type="text" class="form-control"
+														   value="" />
+
+												</div>
+												<div class="modal-footer">
+													<button type="button" class="btn me-auto" data-bs-dismiss="modal">
+														Annuler
+													</button>
+													<button type="button" class="btn btn-primary"
+															data-bs-dismiss="modal">
+														Enregistrer
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="modal modal-blur fade" id="modal-afficher" tabindex="-1" role="dialog"
+										 aria-hidden="true">
+										<div class="modal-dialog modal-dialog-centered" role="document">
+											<div class="modal-content">
+												<div class="modal-header">
+													<h5 class="modal-title">info sur jury</h5>
+													<button type="button" class="btn-close" data-bs-dismiss="modal"
+															aria-label="Close"></button>
+												</div>
+												<div class="modal-body">
+													<div class="row mb-10">
+														<div class="col-6">
+															<label class="required fs-6 fw-bold mb-2">Nom et prénom</label>
+															<input type="text" data-kt-customer-table-filter="search" class="form-control form-control-solid" value="Mohammed Ben chiboube" />
+														</div>
+														<div class="col-6">
+															<label class="required fs-6 fw-bold mb-2">Région</label>
+															<input type="text" data-kt-customer-table-filter="search" class="form-control form-control-solid" value="Fès-Meknès" />
+														</div>
+													</div>
+
+
+
+													<div class="row mb-10">
+														<div class="col-6">
+															<label class="required fs-6 fw-bold mb-2">Tél</label>
+															<input value="(+212) 06 49 18 13 31" type="text" data-kt-customer-table-filter="search" class="form-control form-control-solid"  />
+														</div>
+														<div class="col-6">
+															<label class="required fs-6 fw-bold mb-2">Email</label>
+															<input value="test@ada.ma"  type="text" data-kt-customer-table-filter="search" class="form-control form-control-solid" />
+														</div>
+													</div>
+
+
+													<div class="row mb-10">
+														<div class="col-6">
+															<label class="required fs-6 fw-bold mb-2">Etablissement</label>
+															<input value="Réstaurant Marrakech" type="text" data-kt-customer-table-filter="search" class="form-control form-control-solid"  />
+														</div>
+														<div class="col-6">
+															<label class="required fs-6 fw-bold mb-2">Spécialité</label>
+															<input value="Dégustateur dates"  type="text" data-kt-customer-table-filter="search" class="form-control form-control-solid" />
+														</div>
+													</div>
+
+													<div class="row mb-10">
+														<div class="col-12">
+															<label class="required fs-6 fw-bold mb-2">Adresse</label>
+															<textarea class="form-control form-control-solid" rows="4">
+17 rue 5 janane lwarde
+avenue paule
+Casablanca
+						</textarea>
+														</div>
+													</div>
+
+
+												</div>
+												<div class="modal-footer">
+													<button type="button" class="btn me-auto" data-bs-dismiss="modal">
+														Fermer
+													</button>
+
+												</div>
+											</div>
+										</div>
+									</div>
+
 								</div>
 							</div>
 						</div>
