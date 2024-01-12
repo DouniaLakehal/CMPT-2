@@ -8,8 +8,10 @@ document.addEventListener("DOMContentLoaded", function () {
         width: 500,
         type: 'pie',
       },
-      colors:['#57a757','#c6983c','#6271c4','#75bb33','#a257c5'],
+      colors:['#57a757','#c6983c','#C2A05C','#75bb33','#003700'],
+    
       labels: ['Miel', 'Huiles alimentaire', 'Produits d\’origine animale',['Dattes et autres produits','d\’origine végétale']  ,['Produits à base','de céréales'] ],
+    
       legend: {
         show:true,
         position: 'bottom',
@@ -43,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
       legend: {
         show: false
       },
-      colors:['#c28f29','#a0844c','#c28f29','#a0844c','#c28f29'],
+      colors:['#003700', '#C2A05C', '#046926','#ad925b','#06660b'],
       tooltip: {
         y: {
           formatter: function(val) {
